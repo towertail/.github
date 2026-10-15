@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a problem in Towertail.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report a security issue here. Follow the security policy instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the problem. Add screenshots if they help.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to occur.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See the error
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - macOS app
+        - Windows app
+        - Server
+        - Sampler
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The app, server, or sampler version.
+      placeholder: v1.2.3
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: The OS of the client and, if applicable, of the monitored host.
+      placeholder: macOS 15.1 client, Ubuntu 24.04 host (arm64)
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste the applicable log lines. Remove host names and other private data.
+      render: text
